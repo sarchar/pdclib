@@ -13,7 +13,9 @@
 
 #include <string.h>
 
-#include "/usr/include/errno.h"
+#ifndef LACKS_ERRNO_H
+#include <errno.h>       /* for MALLOC_FAILURE_ACTION */
+#endif /* LACKS_ERRNO_H */
 
 extern struct _PDCLIB_file_t * _PDCLIB_filelist;
 

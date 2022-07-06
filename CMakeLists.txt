@@ -365,7 +365,7 @@ target_include_directories( _dlmalloc  PRIVATE ${CMAKE_SOURCE_DIR}/platform/exam
 target_include_directories( _dlmallocs PRIVATE ${CMAKE_SOURCE_DIR}/platform/example/include/pdclib )
 
 # Two libraries, one for dynamic linking, one for static linking.
-add_library( pdclib  SHARED ${PDCLIB_SOURCES} $<TARGET_OBJECTS:_dlmalloc>  ${PDCLIB_HEADERS} ${PDCLIB_PRIVATE_HEADERS} ${PDCLIB_NOINSTALL_HEADERS} )
+#add_library( pdclib  SHARED ${PDCLIB_SOURCES} $<TARGET_OBJECTS:_dlmalloc>  ${PDCLIB_HEADERS} ${PDCLIB_PRIVATE_HEADERS} ${PDCLIB_NOINSTALL_HEADERS} )
 add_library( pdclibs STATIC ${PDCLIB_SOURCES} $<TARGET_OBJECTS:_dlmallocs> ${PDCLIB_HEADERS} ${PDCLIB_PRIVATE_HEADERS} ${PDCLIB_NOINSTALL_HEADERS} )
 
 # The example implementation makes use of pthread. We use CMake facilities
