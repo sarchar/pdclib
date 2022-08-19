@@ -41,6 +41,8 @@ static const char * _PDCLIB_default_locale( int category )
 
 char * setlocale( int category, const char * locale )
 {
+    (void)category;
+
     /* All below is very much work-in-progress, so we do a dumb-dummy
        return here.
     */

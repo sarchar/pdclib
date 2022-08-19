@@ -13,6 +13,9 @@
 
 void ignore_handler_s( const char * _PDCLIB_restrict msg, void * _PDCLIB_restrict ptr, errno_t errno )
 {
+    (void)msg;
+    (void)ptr;
+    (void)errno;
     return;
 }
 

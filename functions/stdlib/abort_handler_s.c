@@ -13,6 +13,8 @@
 
 void abort_handler_s( const char * _PDCLIB_restrict msg, void * _PDCLIB_restrict ptr, errno_t errno )
 {
+    (void)ptr;
+    (void)errno;
     fprintf( stderr, "abort handler called:\n%s\n", msg );
     abort();
 }

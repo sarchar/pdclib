@@ -7,6 +7,7 @@
 #include <limits.h>
 #include <stdlib.h>
 
+#ifdef TEST
 #ifndef REGTEST
 
 #include <ctype.h>
@@ -116,6 +117,7 @@ static double _PDCLIB_strtod_main( const char * nptr, char ** endptr )
     }
 }
 
+#endif
 #endif
 
 #ifdef TEST

@@ -11,6 +11,7 @@
 /* gmtsub is to gmtime as localsub is to localtime. */
 struct tm * _PDCLIB_gmtsub( struct state const * sp, time_t const * timep, int_fast32_t offset, struct tm * tmp )
 {
+    (void)sp;
     struct tm * result;
 
     result = _PDCLIB_timesub( timep, offset, &_PDCLIB_gmtmem, tmp );

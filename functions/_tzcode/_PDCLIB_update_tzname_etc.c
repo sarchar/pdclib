@@ -10,6 +10,8 @@
 
 void _PDCLIB_update_tzname_etc( struct state const * sp, struct ttinfo const * ttisp )
 {
+    (void)sp;
+    (void)ttisp;
 #if HAVE_TZNAME
     tzname[ ttisp->isdst ] = (char *) &sp->chars[ ttisp->desigidx ];
 #endif
